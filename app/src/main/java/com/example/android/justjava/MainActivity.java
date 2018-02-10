@@ -17,11 +17,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    int quantity = 2;
+
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity = 4;
+        display(quantity);
+        displayPrice(quantity * 5);
+    }
+
+    /**
+     * This method is called when the + button is clicked.
+     */
+    public void increment(View view) {
+        quantity++;
+        display(quantity);
+        displayPrice(quantity * 5);
+    }
+
+    /**
+     * This method is called when the - button is clicked.
+     */
+    public void decrement(View view) {
+        quantity--;
         display(quantity);
         displayPrice(quantity * 5);
     }

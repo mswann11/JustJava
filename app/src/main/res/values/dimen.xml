@@ -1,4 +1,5 @@
 <resources>
     <dimen name="padding">16dp</dimen>
     <dimen name="textSize">16sp</dimen>
+    <dimen name="button">48dp</dimen>
 </resources>
