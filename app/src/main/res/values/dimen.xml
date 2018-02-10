@@ -1,3 +1,4 @@
 <resources>
     <dimen name="padding">16dp</dimen>
+    <dimen name="textSize">16sp</dimen>
 </resources>
