@@ -7,4 +7,5 @@
     <string name="increment">+</string>
     <string name="dollars">$0</string>
     <string name="orderButton">order</string>
+    <string name="just_java">Just\nJava</string>
 </resources>

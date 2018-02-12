@@ -1,61 +1,116 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingHorizontal="@dimen/padding"
-    android:paddingVertical="@dimen/padding"
+    android:background="#bfc6b9"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/java"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/order"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/padding"
+        android:src="@drawable/just_java" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/price"
+        android:layout_alignBottom="@+id/price"
+        android:layout_alignEnd="@+id/java"
+        android:layout_alignRight="@+id/java"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/reenie_beanie"
+        android:paddingHorizontal="@dimen/button"
+        android:text="@string/just_java"
+        android:textColor="#4d3319"
+        android:textSize="@dimen/javatextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding"
         android:text="@string/quantity"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize" />
 
     <Button
+        android:id="@+id/decrement"
         android:layout_width="@dimen/button"
         android:layout_height="@dimen/button"
-        android:layout_marginTop="@dimen/padding"
-        android:onClick="increment"
-        android:text="@string/increment" />
+        android:layout_below="@id/quantity"
+        android:layout_marginStart="@dimen/padding"
+        android:background="#4d3319"
+        android:onClick="decrement"
+        android:text="@string/decrement"
+        android:textColor="#FFF"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/quantity_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_0"
+        android:layout_below="@id/quantity"
+        android:layout_toEndOf="@id/decrement"
         android:paddingHorizontal="@dimen/paddingQ"
+        android:paddingVertical="8dp"
+        android:text="@string/_0"
         android:textColor="@color/black"
         android:textSize="@dimen/textSize" />
 
     <Button
+        android:id="@+id/increment"
         android:layout_width="@dimen/button"
         android:layout_height="@dimen/button"
-        android:onClick="decrement"
-        android:text="@string/decrement" />
+        android:layout_below="@id/quantity"
+        android:layout_marginBottom="@dimen/padding"
+        android:layout_toEndOf="@id/quantity_text_view"
+        android:background="#4d3319"
+        android:onClick="increment"
+        android:text="@string/increment"
+        android:textColor="#FFF"
+        android:textSize="@dimen/textSize" />
 
     <TextView
+        android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/padding"
-        android:layout_marginTop="@dimen/padding"
+        android:layout_below="@id/increment"
+        android:layout_margin="@dimen/padding"
+        android:paddingTop="@dimen/padding"
         android:text="@string/price"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize" />
 
     <TextView
         android:id="@+id/price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/price"
+        android:layout_marginStart="@dimen/padding"
         android:text="@string/dollars"
         android:textColor="@color/black"
         android:textSize="@dimen/textSize" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/order"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="@dimen/padding"
+        android:background="#4d3319"
         android:onClick="submitOrder"
-        android:text="@string/orderButton" />
+        android:padding="@dimen/paddingQ"
+        android:text="@string/orderButton"
+        android:textAllCaps="true"
+        android:textColor="#FFF"
+        android:textSize="@dimen/textSize" />
 
-</LinearLayout>
+</RelativeLayout>
