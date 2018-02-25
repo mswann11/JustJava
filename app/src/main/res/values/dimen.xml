@@ -1,7 +1,7 @@
 <resources>
     <dimen name="padding">20dp</dimen>
     <dimen name="textSize">20sp</dimen>
-    <dimen name="javatextSize">80sp</dimen>
+    <dimen name="javatextSize">50sp</dimen>
     <dimen name="paddingQ">16dp</dimen>
     <dimen name="button">40dp</dimen>
     <dimen name="javaMargin">24dp</dimen>
