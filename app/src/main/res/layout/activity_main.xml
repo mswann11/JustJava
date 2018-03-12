@@ -1,9 +1,17 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#cfd8c7"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/java"
@@ -31,7 +39,20 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/padding">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding"
+            android:backgroundTint="@color/black"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            android:textColorHint="@color/darkgray"/>
 
         <TextView
             android:id="@+id/toppings"
@@ -44,11 +65,24 @@
             android:textSize="@dimen/textSize" />
 
         <CheckBox
+            android:id="@+id/whipped_cream_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/whipped"
             android:textColor="@color/black"
             android:textSize="@dimen/textSize"
+            android:paddingHorizontal="@dimen/javaMargin"
+            android:layout_marginStart="@dimen/padding"
+            android:button="@drawable/checkbox" />
+
+        <CheckBox
+            android:id="@+id/chocolate_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chocolate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            android:layout_marginTop="@dimen/paddingQ"
             android:paddingHorizontal="@dimen/javaMargin"
             android:layout_marginStart="@dimen/padding"
             android:button="@drawable/checkbox" />
@@ -137,4 +171,6 @@
         android:textColor="#FFF"
         android:textSize="@dimen/textSize" />
 
-</RelativeLayout>
+    </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
